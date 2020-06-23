@@ -22,7 +22,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Instala a framework de testes
-      run: pip install pytest
+      run: pip install wheel pytest
 
     # Runs a set of commands using the runners shell
     - name: Executa os testes
