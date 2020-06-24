@@ -8,6 +8,9 @@ class Calculadora():
         self.num_1 = num_1
         self.num_2 = num_2
 
+    def health(self):
+        return "OK"
+
     def soma(self):
         """Calcula a soma de dois números
 

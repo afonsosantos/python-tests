@@ -1,16 +1,27 @@
 import pytest
-from main import soma, subtracao, multiplicacao, divisao
+from calculadora import Calculadora
 
 
-class TestMain():
+class TesteCalculadora():
+
+    def setup(self):
+        self.calculadora = Calculadora(3, 3)
+
+    def test_health(self):
+        assert self.calculadora.health() == "OK"
+
     def test_soma(self):
-        assert soma(1, 3) == 4
+        resultado = self.calculadora.soma()
+        assert resultado == (self.calculadora.num_1 + self.calculadora.num_2)
 
     def test_subtracao(self):
-        assert subtracao(2, 1) == 1
+        resultado = self.calculadora.subtracao()
+        assert resultado == (self.calculadora.num_1 - self.calculadora.num_2)
 
     def test_multiplicacao(self):
-        assert multiplicacao(2, 2) == 4
+        resultado = self.calculadora.multiplicacao()
+        assert resultado == (self.calculadora.num_1 * self.calculadora.num_2)
 
     def test_divisao(self):
-        assert divisao(2, 1) == 2
+        resultado = self.calculadora.divisao()
+        assert resultado == (self.calculadora.num_1 / self.calculadora.num_2)
