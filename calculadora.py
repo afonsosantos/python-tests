@@ -57,4 +57,7 @@ class Calculadora():
         Returns:
             int: A divisão dos dois números
         """
-        return self.num_1 / self.num_2
+        try:
+            return self.num_1 / self.num_2
+        except ZeroDivisionError as err:
+            raise err

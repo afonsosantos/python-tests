@@ -6,7 +6,8 @@ from calculadora import Calculadora
 class TesteCalculadora():
 
     def setup(self):
-        self.calculadora = Calculadora(randrange(10), randrange(10))
+        # self.calculadora = Calculadora(randrange(10), randrange(10))
+        self.calculadora = Calculadora(0, 1)
 
     def test_health(self):
         assert self.calculadora.health() == "OK"
