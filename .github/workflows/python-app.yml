@@ -19,6 +19,8 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.5', '3.6', '3.7', '3.8']
+
+    # define o nome do job consoante a versão do Python
     name: Python ${{ matrix.python-version }}
 
     # ações a efetuar para cada job
