@@ -1,10 +1,16 @@
 import pytest
-from main import soma
+from main import soma, subtracao, multiplicacao, divisao
 
 
 class TestMain():
-    def test_soma_1(self):
+    def test_soma(self):
         assert soma(1, 3) == 4
 
-    def teste_soma_2(self):
-        assert soma(1.0, 3.0) == 4.0
+    def test_subtracao(self):
+        assert subtracao(2, 1) == 1
+
+    def test_multiplicacao(self):
+        assert multiplicacao(2, 2) == 4
+
+    def test_divisao(self):
+        assert divisao(2, 1) == 2
