@@ -59,5 +59,5 @@ class Calculadora():
         """
         try:
             return self.num_1 / self.num_2
-        except ZeroDivisionError as err:
-            raise err
+        except ZeroDivisionError:
+            raise ZeroDivisionError
