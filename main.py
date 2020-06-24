@@ -1,53 +1,57 @@
 """Módulo principal"""
 
 
-def soma(num_1: int, num_2: int):
-    """Calcula a soma de dois números
+class Calculadora():
+    """Representa uma calculadora com operações básicas"""
 
-    Args:
-        num_1 (int): O primeiro número
-        num_2 (int): O segundo número
+    def __init__(self, num_1, num_2):
+        self.num_1 = num_1
+        self.num_2 = num_2
 
-    Returns:
-        int: A soma dos dois números
-    """
-    return num_1 + num_2
+    def soma(self):
+        """Calcula a soma de dois números
 
+        Args:
+            num_1 (int): O primeiro número
+            num_2 (int): O segundo número
 
-def subtracao(num_1: int, num_2: int):
-    """Calcula a subtração de dois números
+        Returns:
+            int: A soma dos dois números
+        """
+        return self.num_1 + self.num_2
 
-    Args:
-        num_1 (int): O primeiro número
-        num_2 (int): O segundo número
+    def subtracao(self):
+        """Calcula a subtração de dois números
 
-    Returns:
-        int: A subtração dos dois números
-    """
-    return num_1 - num_2
+        Args:
+            num_1 (int): O primeiro número
+            num_2 (int): O segundo número
 
+        Returns:
+            int: A subtração dos dois números
+        """
+        return self.num_1 - self.num_2
 
-def multiplicacao(num_1: int, num_2: int):
-    """Calcula a multiplicação de dois números
+    def multiplicacao(self):
+        """Calcula a multiplicação de dois números
 
-    Args:
-        num_1 (int): O primeiro número
-        num_2 (int): O segundo número
+        Args:
+            num_1 (int): O primeiro número
+            num_2 (int): O segundo número
 
-    Returns:
-        int: A multiplicação dos dois números
-    """
-    return num_1 * num_2
+        Returns:
+            int: A multiplicação dos dois números
+        """
+        return self.num_1 * self.num_2
 
+    def divisao(self):
+        """Calcula a divisão de dois números
 
-def divisao(num_1: int, num_2: int):
-    """Calcula a divisão de dois números
+        Args:
+            num_1 (int): O primeiro número
+            num_2 (int): O segundo número
 
-    Args:
-        num_1 (int): O primeiro número
-        num_2 (int): O segundo número
-
-    Returns:
-        int: A divisão dos dois números
-    """
-    return num_1 / num_2
+        Returns:
+            int: A divisão dos dois números
+        """
+        return self.num_1 / self.num_2
