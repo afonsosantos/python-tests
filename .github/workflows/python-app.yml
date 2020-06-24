@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Python application
+name: Aplicação Python
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Python 3.8
+    - name: Configuração do Python 3.8
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
@@ -30,9 +30,10 @@ jobs:
 
     - name: Linting com flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
+        # para a build se existirem erros de sintaxe Python ou variáveis não definidas
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        # exit-zero trata todos os erros como avisos. O editor do Github tem 127 caracteres
+        # de largura
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Testes com pytest
