@@ -1,11 +1,12 @@
 import pytest
+from random import randrange
 from calculadora import Calculadora
 
 
 class TesteCalculadora():
 
     def setup(self):
-        self.calculadora = Calculadora(3, 3)
+        self.calculadora = Calculadora(randrange(10), randrange(10))
 
     def test_health(self):
         assert self.calculadora.health() == "OK"
