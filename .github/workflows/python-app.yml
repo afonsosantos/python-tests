@@ -14,13 +14,18 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        python-version: ['3.5', '3.6', '3.7', '3.8']
+    name: Python ${{ matrix.python-version }}
+
     steps:
     - uses: actions/checkout@v2
 
-    - name: Configuração do Python 3.8
+    - name: Configuração do Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: ${{ matrix.python-version }}
 
     - name: Instalação de dependências
       run: |
