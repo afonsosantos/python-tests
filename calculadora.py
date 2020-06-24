@@ -60,3 +60,5 @@ class Calculadora():
         if self.num_1 or self.num_2 == 0:
             raise ZeroDivisionError
         return self.num_1 / self.num_2
+
+        # FIXME finalizar as exceções
