@@ -27,3 +27,7 @@ class TesteCalculadora:
         self.resultado = self.calculadora.divisao()
         assert self.resultado == (
             self.calculadora.num_1 / self.calculadora.num_2)
+
+
+if __name__ == '__main__':
+    pytest.main(args=[__file__])
