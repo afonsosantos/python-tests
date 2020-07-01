@@ -54,4 +54,8 @@ class Calculadora():
         Returns:
             int: A divisão dos dois números
         """
+
+        if self.num_1 == 0 or self.num_2 == 0:
+            return "Divisão por Zero"
+
         return self.num_1 / self.num_2
