@@ -1,11 +1,10 @@
 version = 1
 
-test_patterns = ["*.py"]
+test_patterns = ["test_*.py"]
 
 exclude_patterns = [
     ".vscode/**",
-    ".github/**",
-    ".gitignore"
+    ".github/**"
 ]
 
 [[analyzers]]
