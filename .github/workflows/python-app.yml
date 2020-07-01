@@ -40,25 +40,12 @@ jobs:
 
     - name: Linting com flake8
       run: |
-        # para a build se existirem erros de sintaxe Python ou variáveis não definidas
+        # pára a build se existirem erros de sintaxe Python ou variáveis não definidas
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
         # exit-zero trata todos os erros como avisos. O editor do Github tem 127 caracteres
         # de largura
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Testes com pytest
       run: pytest
-
-    - name: Report results to DeepSource
-      run: |
-        # Generate coverage report in xml format
-        coverage xml
-      
-        # Install deepsource CLI
-        curl https://deepsource.io/cli | sh
-      
-        # From the root directory, run the report coverage command
-        ./bin/deepsource report --analyzer test-coverage --key python --value-file ./coverage.xml
-          
-      env: 
-        DEEPSOURCE_DSN: ${{ secrets.DEEPSOURCE_DSN }}
