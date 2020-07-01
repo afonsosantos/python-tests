@@ -18,7 +18,6 @@ class Calculadora():
         Returns:
             int: A soma dos dois números
         """
-        self.teste = 1
         return self.num_1 + self.num_2
 
     def subtracao(self):
