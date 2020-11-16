@@ -1,6 +1,6 @@
 import pytest
 from random import randint
-from calculadora import Calculadora
+from src.calculadora import Calculadora
 
 
 class TestesCalculadora:
