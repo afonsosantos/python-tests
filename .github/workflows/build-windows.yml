@@ -27,7 +27,15 @@ jobs:
         with:
           path: src
 
-      - uses: actions/upload-artifact@v2
+      - name: Get current time (for artifact)
+        uses: 1466587594/get-current-time@v2
+        id: current-time
         with:
-          name: calculadora-win
+          format: YYYYMMDD
+
+      - uses: actions/upload-artifact@v2
+        env:
+          DATE: "${{ steps.current-time.outputs.formattedTime }}"
+        with:
+          name: calculadora-win-$DATE
           path: src/dist/windows
