@@ -61,7 +61,7 @@ class Calculadora():
         return self.num_1 / self.num_2
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     num1 = int(input('1st number: '))
     num2 = int(input('2nd number: '))
 
